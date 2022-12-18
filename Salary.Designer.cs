@@ -197,6 +197,8 @@ namespace EmployeeManagementSystem
             this.Attendance.Size = new System.Drawing.Size(240, 27);
             this.Attendance.TabIndex = 11;
             this.Attendance.Text = "1";
+            this.Attendance.TextChanged += new System.EventHandler(this.SalEmp_SelectedIndexChanged);
+            this.Attendance.Leave += new System.EventHandler(this.SalEmp_SelectedIndexChanged);
             // 
             // label7
             // 

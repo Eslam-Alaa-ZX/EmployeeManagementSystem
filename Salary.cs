@@ -48,9 +48,8 @@ namespace EmployeeManagementSystem
 
         private void Clear()
         {
-            SalEmp.SelectedIndex = -1;
             Attendance.Text = "1";
-            Total.Text = "0";
+            GetEmpSalary();
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -105,9 +104,16 @@ namespace EmployeeManagementSystem
 
         private void SalEmp_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(Convert.ToInt32(Attendance.Text) > 31)
+            if(Attendance.Text == "")
+            {
+                Attendance.Text = "0";
+                Attendance.SelectAll();
+                //MessageBox.Show("Days can not be null");
+            }
+            else if (Convert.ToInt32(Attendance.Text) > 31)
             {
                 MessageBox.Show("Days can not be grater than 31");
+                Attendance.SelectAll();
             }
             else
             {
