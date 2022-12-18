@@ -171,9 +171,9 @@ namespace EmployeeManagementSystem
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(85, 135);
+            this.pictureBox5.Location = new System.Drawing.Point(78, 122);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(84, 63);
+            this.pictureBox5.Size = new System.Drawing.Size(91, 84);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 9;
             this.pictureBox5.TabStop = false;
