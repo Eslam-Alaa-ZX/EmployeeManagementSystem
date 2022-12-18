@@ -34,10 +34,10 @@ namespace EmployeeManagementSystem
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.DepName = new System.Windows.Forms.TextBox();
+            this.AddBtn = new System.Windows.Forms.Button();
+            this.UpdateBtn = new System.Windows.Forms.Button();
+            this.DeleteBtn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -47,7 +47,7 @@ namespace EmployeeManagementSystem
             this.label18 = new System.Windows.Forms.Label();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DepGV = new System.Windows.Forms.DataGridView();
             this.label12 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -55,7 +55,7 @@ namespace EmployeeManagementSystem
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DepGV)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -99,52 +99,55 @@ namespace EmployeeManagementSystem
             this.label6.Text = "Department Name";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
-            // textBox1
+            // DepName
             // 
-            this.textBox1.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(26, 421);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(240, 27);
-            this.textBox1.TabIndex = 11;
+            this.DepName.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DepName.Location = new System.Drawing.Point(26, 421);
+            this.DepName.Name = "DepName";
+            this.DepName.Size = new System.Drawing.Size(240, 27);
+            this.DepName.TabIndex = 11;
             // 
-            // button1
+            // AddBtn
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.GrayText;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(26, 691);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 42);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = false;
+            this.AddBtn.BackColor = System.Drawing.SystemColors.GrayText;
+            this.AddBtn.FlatAppearance.BorderSize = 0;
+            this.AddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddBtn.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddBtn.Location = new System.Drawing.Point(26, 691);
+            this.AddBtn.Name = "AddBtn";
+            this.AddBtn.Size = new System.Drawing.Size(103, 42);
+            this.AddBtn.TabIndex = 26;
+            this.AddBtn.Text = "Add";
+            this.AddBtn.UseVisualStyleBackColor = false;
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
-            // button2
+            // UpdateBtn
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(163, 691);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(103, 42);
-            this.button2.TabIndex = 27;
-            this.button2.Text = "Update";
-            this.button2.UseVisualStyleBackColor = false;
+            this.UpdateBtn.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.UpdateBtn.FlatAppearance.BorderSize = 0;
+            this.UpdateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UpdateBtn.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateBtn.Location = new System.Drawing.Point(163, 691);
+            this.UpdateBtn.Name = "UpdateBtn";
+            this.UpdateBtn.Size = new System.Drawing.Size(103, 42);
+            this.UpdateBtn.TabIndex = 27;
+            this.UpdateBtn.Text = "Update";
+            this.UpdateBtn.UseVisualStyleBackColor = false;
+            this.UpdateBtn.Click += new System.EventHandler(this.UpdateBtn_Click);
             // 
-            // button3
+            // DeleteBtn
             // 
-            this.button3.BackColor = System.Drawing.Color.Red;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(663, 691);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(103, 42);
-            this.button3.TabIndex = 28;
-            this.button3.Text = "Delete";
-            this.button3.UseVisualStyleBackColor = false;
+            this.DeleteBtn.BackColor = System.Drawing.Color.Red;
+            this.DeleteBtn.FlatAppearance.BorderSize = 0;
+            this.DeleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteBtn.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteBtn.Location = new System.Drawing.Point(663, 691);
+            this.DeleteBtn.Name = "DeleteBtn";
+            this.DeleteBtn.Size = new System.Drawing.Size(103, 42);
+            this.DeleteBtn.TabIndex = 28;
+            this.DeleteBtn.Text = "Delete";
+            this.DeleteBtn.UseVisualStyleBackColor = false;
+            this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
             // 
             // panel2
             // 
@@ -173,6 +176,7 @@ namespace EmployeeManagementSystem
             this.label16.Size = new System.Drawing.Size(93, 26);
             this.label16.TabIndex = 44;
             this.label16.Text = "Employees";
+            this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
             // pictureBox11
             // 
@@ -193,6 +197,7 @@ namespace EmployeeManagementSystem
             this.label17.Size = new System.Drawing.Size(110, 26);
             this.label17.TabIndex = 42;
             this.label17.Text = "Departments";
+            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // pictureBox12
             // 
@@ -213,6 +218,7 @@ namespace EmployeeManagementSystem
             this.label18.Size = new System.Drawing.Size(59, 26);
             this.label18.TabIndex = 40;
             this.label18.Text = "Salary";
+            this.label18.Click += new System.EventHandler(this.label18_Click);
             // 
             // pictureBox13
             // 
@@ -233,14 +239,20 @@ namespace EmployeeManagementSystem
             this.label19.Size = new System.Drawing.Size(63, 26);
             this.label19.TabIndex = 38;
             this.label19.Text = "Logout";
+            this.label19.Click += new System.EventHandler(this.label19_Click);
             // 
-            // dataGridView1
+            // DepGV
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(313, 257);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(825, 413);
-            this.dataGridView1.TabIndex = 47;
+            this.DepGV.AllowUserToAddRows = false;
+            this.DepGV.AllowUserToDeleteRows = false;
+            this.DepGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DepGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DepGV.Location = new System.Drawing.Point(313, 257);
+            this.DepGV.Name = "DepGV";
+            this.DepGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DepGV.Size = new System.Drawing.Size(825, 413);
+            this.DepGV.TabIndex = 47;
+            this.DepGV.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DepGV_CellMouseClick);
             // 
             // label12
             // 
@@ -258,7 +270,7 @@ namespace EmployeeManagementSystem
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1163, 788);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DepGV);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.label16);
@@ -269,10 +281,10 @@ namespace EmployeeManagementSystem
             this.Controls.Add(this.pictureBox13);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.DeleteBtn);
+            this.Controls.Add(this.UpdateBtn);
+            this.Controls.Add(this.AddBtn);
+            this.Controls.Add(this.DepName);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.panel1);
@@ -288,7 +300,7 @@ namespace EmployeeManagementSystem
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DepGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -300,10 +312,10 @@ namespace EmployeeManagementSystem
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox DepName;
+        private System.Windows.Forms.Button AddBtn;
+        private System.Windows.Forms.Button UpdateBtn;
+        private System.Windows.Forms.Button DeleteBtn;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Label label16;
@@ -313,7 +325,7 @@ namespace EmployeeManagementSystem
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DepGV;
         private System.Windows.Forms.Label label12;
     }
 }

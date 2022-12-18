@@ -52,6 +52,7 @@
     <Compile Include="Departments.Designer.cs">
       <DependentUpon>Departments.cs</DependentUpon>
     </Compile>
+    <Compile Include="Functions.cs" />
     <Compile Include="Salary.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -58,14 +58,14 @@ namespace EmployeeManagementSystem
             this.button3 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DepGV = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DepGV)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -240,6 +240,9 @@ namespace EmployeeManagementSystem
             // 
             this.comboBox1.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
             this.comboBox1.Location = new System.Drawing.Point(26, 311);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(240, 31);
@@ -353,13 +356,17 @@ namespace EmployeeManagementSystem
             this.label12.TabIndex = 30;
             this.label12.Text = "Manage Employees";
             // 
-            // dataGridView1
+            // DepGV
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(316, 246);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(811, 425);
-            this.dataGridView1.TabIndex = 31;
+            this.DepGV.AllowUserToAddRows = false;
+            this.DepGV.AllowUserToDeleteRows = false;
+            this.DepGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DepGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DepGV.Location = new System.Drawing.Point(316, 238);
+            this.DepGV.Name = "DepGV";
+            this.DepGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DepGV.Size = new System.Drawing.Size(825, 433);
+            this.DepGV.TabIndex = 48;
             // 
             // Employees
             // 
@@ -367,7 +374,7 @@ namespace EmployeeManagementSystem
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1163, 788);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DepGV);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button3);
@@ -406,7 +413,7 @@ namespace EmployeeManagementSystem
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DepGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -442,6 +449,6 @@ namespace EmployeeManagementSystem
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DepGV;
     }
 }
