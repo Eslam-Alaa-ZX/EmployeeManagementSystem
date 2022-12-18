@@ -136,11 +136,6 @@ namespace EmployeeManagementSystem
             }
         }
 
-        private void EmpGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void EmpGV_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             EmpName.Text= EmpGV.SelectedRows[0].Cells[1].Value.ToString();

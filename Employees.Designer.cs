@@ -373,7 +373,6 @@ namespace EmployeeManagementSystem
             this.EmpGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.EmpGV.Size = new System.Drawing.Size(825, 433);
             this.EmpGV.TabIndex = 48;
-            this.EmpGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.EmpGV_CellContentClick);
             this.EmpGV.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.EmpGV_CellMouseClick);
             // 
             // Employees
